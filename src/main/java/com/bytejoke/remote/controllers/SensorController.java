@@ -30,6 +30,10 @@ public class SensorController {
     public String addDataForm(@ModelAttribute("sensor") Sensor sensor) {
         return "sensors/new";
     }
+    @GetMapping("/edit")
+    public String editSensor(@ModelAttribute("sensor") Sensor sensor) {
+        return "sensors/edit";
+    }
 
     @PostMapping()
     public String addData(@ModelAttribute("sensor") Sensor sensor) {

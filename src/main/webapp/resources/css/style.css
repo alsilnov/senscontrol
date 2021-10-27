@@ -1,0 +1,6 @@
+.sensor_new_form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
