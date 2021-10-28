@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-    <link href="/resources/css/style.css" th:href="@{/resources/css/style.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/resources/css/style.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{http://fonts.googleapis.com/css?family=Rubik}" rel='stylesheet' type='text/css' />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sensors</title>
+    <title>Edit Sensor</title>
 </head>
-<div class="sensor_new_form">
-    <form th:method="POST" th:action="@{/sensors}" th:object="${sensor}">
+<div>
+    <form th:method="PATCH" th:action="@{/sensors/{id}(id=${sensor.getId()})}" th:object="${sensor}">
         <label for="name">Enter sensor name: </label>
         <input type="text" th:field="*{name}" id="name" />
-        <br />
-        <input type="submit" value="Create!" />
+        <input type="submit" value="Update!" />
     </form>
 </div>
 

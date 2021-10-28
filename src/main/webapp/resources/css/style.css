@@ -4,3 +4,52 @@
     justify-content: center;
     align-items: center;
 }
+
+.sensor_item_button_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sensor_item_button {
+    display: flex;
+    justify-content: center;
+    appearance: none;
+    min-width: 100px;
+    border: 0;
+    border-radius: 5px;
+    background: #4676d7;
+    padding: 10px 16px;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+.sensor_item_button a {
+    color: white;
+}
+
+.sensor_item_button:hover {
+    background: #1d49aa;
+}
+
+.sensor_item_button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+}
+
+
+/********** Basic Styles **********/
+
+.sensor_item_button_box {
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+a {
+    font-family: "Rubik";
+    text-decoration: unset;
+    color: #000;
+}

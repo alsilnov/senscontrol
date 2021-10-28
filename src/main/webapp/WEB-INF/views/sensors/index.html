@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <link href="/resources/css/style.css" th:href="@{/resources/css/style.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/resources/css/style.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{http://fonts.googleapis.com/css?family=Rubik}" rel='stylesheet' type='text/css' />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,10 @@
 </head>
 
 <body>
-    <div th:each="sensor : ${sensors}">
-        <a th:href="@{/sensors/{id}(id=${sensor.getId()})}" th:text=${sensor.getName()}>sensor</a>
+    <div class="sensor_item_button_box">
+        <div th:each="sensor : ${sensors}" class="sensor_item_button">
+            <a th:href="@{/sensors/{id}(id=${sensor.getId()})/edit}" th:text=${sensor.getName()}>sensor</a>
+        </div>
     </div>
     <div>
         <a th:href="@{/sensors/new}">Add Sensor</a>

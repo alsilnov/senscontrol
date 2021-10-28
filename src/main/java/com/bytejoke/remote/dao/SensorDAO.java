@@ -13,7 +13,13 @@ public class SensorDAO {
     private List<Sensor> sensorsList;
 
     public SensorDAO() {
-        this.sensorsList = new ArrayList<>();;
+        this.sensorsList = new ArrayList<>();
+        sensorsList.add(new Sensor(++sensorCount, "First"));
+        sensorsList.add(new Sensor(++sensorCount, "Second"));
+        sensorsList.add(new Sensor(++sensorCount, "Third"));
+        sensorsList.add(new Sensor(++sensorCount, "Fourth"));
+        sensorsList.add(new Sensor(++sensorCount, "Fifth"));
+        sensorsList.add(new Sensor(++sensorCount, "Sixth"));
     }
 
     public List<Sensor> index() {
@@ -23,10 +29,9 @@ public class SensorDAO {
     public Sensor show(int id) {
         return sensorsList.stream().filter(sensor -> sensor.getId() == id).findAny().orElse(null);
     }
-    
-    public void save(Sensor sensor) {
+
+    public void add(Sensor sensor) {
         sensor.setId(++sensorCount);
         sensorsList.add(sensor);
     }
-
 }
